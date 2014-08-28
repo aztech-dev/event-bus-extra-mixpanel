@@ -29,3 +29,44 @@ Add the following code to your bootstrap file :
 ```
 require_once 'vendor/autoload.php';
 ```
+
+## Dependencies
+
+  * mixpanel/mixpanel-php : ~2
+
+## Supported elements :
+
+  * Persistent publish
+
+## Configuration options & defaults
+
+| Parameter | Default | Description |
+|--------------|-------------|-------------------------------------------------------------------------------------------|
+| `project-token` | **required** | Your Mixpanel project token. |
+| `always-flush` | `false` | Whether to flush events after each Mixpanel publish. |
+
+The `always-flush` parameter is useful if you want to use the plugin in long running processes. By default,
+the Mixpanel API flushes sent events only at the end of the execution cycle. This is fine for most cases,
+but in long running processes, you can set this option to true to ensure an event is flushed by the API
+after each publish.
+
+## Initialization
+
+```php
+
+require_once 'vendor/autoload.php';
+
+use \Aztech\Events\Bus\Events;
+use \Aztech\Events\Bus\Plugins\Mixpanel\Mixpanel;
+
+Mixpanel::loadPlugin('mix');
+
+// See options chart for actual parameters
+$options = array('project-token' => 'YOUR_TOKEN');
+
+$publisher = Events::createPublisher('mix', $options);
+$event = Events::create('category', array('property' => 'value'));
+
+$publisher->publish($event);
+// ...
+```
