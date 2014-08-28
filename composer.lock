@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "eb2514a26f1a64d91e9f7478b92c7c13",
+    "hash": "16c174f6abf8ac3e29dec52d36974b6c",
     "packages": [
         {
             "name": "aztech/event-bus",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/aztech-dev/event-bus.git",
-                "reference": "af29d289378f708579c020b5f291a407aecf928a"
+                "reference": "c8805b30af71f45255b776dd37fe86c1ff66ffa2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aztech-dev/event-bus/zipball/af29d289378f708579c020b5f291a407aecf928a",
-                "reference": "af29d289378f708579c020b5f291a407aecf928a",
+                "url": "https://api.github.com/repos/aztech-dev/event-bus/zipball/c8805b30af71f45255b776dd37fe86c1ff66ffa2",
+                "reference": "c8805b30af71f45255b776dd37fe86c1ff66ffa2",
                 "shasum": ""
             },
             "require": {
@@ -36,7 +36,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -54,7 +54,7 @@
                 "event-bus",
                 "events"
             ],
-            "time": "2014-08-28 10:44:41"
+            "time": "2014-08-28 13:12:26"
         },
         {
             "name": "aztech/event-dispatcher",
